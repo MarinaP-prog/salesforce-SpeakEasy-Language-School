@@ -6,7 +6,6 @@ public with sharing class AresAccountService {
         List<Response> responses = new List<Response>();
 
         String endpointUrl = 'https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/';
-        //String icoFromFlow = '03024130';
 
         for (Requests req : requests) {
             Response res = new Response();
@@ -24,7 +23,6 @@ public with sharing class AresAccountService {
                 res.errorMessage =  e.getMessage();
         }
       }
-        //upsert responses;
         return responses;
     }
 
@@ -51,10 +49,6 @@ public with sharing class AresAccountService {
                 
                 res.account = account;
                 res.success = true;
-                System.debug(res);
-                   /* 15:04:30:254 USER_DEBUG [39]|DEBUG|(Account:{ICO__c=03024130, Name=VELKÁ PECKA s.r.o., Legal_Form_Id__c=112, City_Name__c=Praha, Zip_Code__c=18600,
-                     Country_Name__c=Česká republika, Street_Name__c=Karolinská, Building_Number__c=654, Street_Number__c=2, District_Name__c=Karlín, 
-                     City_District_Name__c=Praha 8, Region_Name__c=Hlavní město Praha, Full_Address__c=Karolinská 654/2, Karlín, 18600 Praha 8}) */
             } else if (response.getStatusCode() == 400) {
                 res.errorMessage = 'Chyba vstupu (například špatný formát IČO)';
                 res.success = false;
