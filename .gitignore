@@ -11,6 +11,16 @@ deploy-options.json
 .sfdx/orgs/
 .sfdx/tools/
 
+scripts/
+.husky/
+.vscode/
+config/
+ares.json
+test-results/
+eslint.config.js
+jest.config.js
+package.json
+
 # VS Code workspace (optional, ale doporučuju)
 .vscode/
 
