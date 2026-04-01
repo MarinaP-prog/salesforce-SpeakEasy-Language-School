@@ -7,6 +7,16 @@
 .sfdx/
 .localdevserver/
 deploy-options.json
+# Salesforce auth & local org data
+.sfdx/orgs/
+.sfdx/tools/
+
+# VS Code workspace (optional, ale doporučuju)
+.vscode/
+
+# Temporary files
+*.tmp
+*.bak
 
 # LWC VSCode autocomplete
 **/lwc/jsconfig.json
