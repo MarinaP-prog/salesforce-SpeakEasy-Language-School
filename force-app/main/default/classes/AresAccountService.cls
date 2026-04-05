@@ -46,7 +46,7 @@ public with sharing class AresAccountService {
                 account.BillingState = (String) billingAddress.get('nazevCastiObce');
                 account.Region_Name__c = (String) billingAddress.get('nazevKraje');
                 account.Full_Address__c = (String) billingAddress.get('textovaAdresa');
-                
+
                 res.account = account;
                 res.success = true;
             } else if (response.getStatusCode() == 400) {
@@ -82,6 +82,7 @@ public with sharing class AresAccountService {
 
     @InvocableVariable
     public Boolean success;
+
 }
   
 }
